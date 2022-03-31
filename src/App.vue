@@ -1,9 +1,12 @@
 <template>
   <v-app>
-    <v-navigation-drawer app color="secondary" expand-on-hover>
-      v-navigation-drawer
-    </v-navigation-drawer>
-    <v-app-bar app color="primary"> v-app-bar </v-app-bar>
+    <v-app-bar app color="primary" prominent>
+      <v-app-bar-nav-icon
+        variant="text"
+        @click.stop="drawer = !drawer"
+      ></v-app-bar-nav-icon>
+      v-app-bar
+    </v-app-bar>
 
     <!-- Sizes your content based upon application components -->
     <v-main>
@@ -16,6 +19,15 @@
         v-footerv-footerv-footerv-footerv-footerv-footerv-footerv-footerv-footer
       </v-footer>
     </v-main>
+    <v-navigation-drawer
+      app
+      color="secondary"
+      v-model="drawer"
+      bottom
+      permanent
+    >
+      v-navigation-drawer
+    </v-navigation-drawer>
   </v-app>
 </template>
 
@@ -24,5 +36,8 @@ export default {
   name: "App",
 
   components: {},
+  data: () => ({
+    drawer: true,
+  }),
 };
 </script>
