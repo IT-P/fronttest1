@@ -1,28 +1,28 @@
 <template>
   <v-app>
-    <v-app-bar color="primary"></v-app-bar>
-    <v-navigation-drawer color="grey-darken-1" permanent></v-navigation-drawer>
+    <v-navigation-drawer app color="secondary" expand-on-hover>
+      v-navigation-drawer
+    </v-navigation-drawer>
+    <v-app-bar app color="primary"> v-app-bar </v-app-bar>
+
+    <!-- Sizes your content based upon application components -->
     <v-main>
-      <v-content>
-        <v-container fluid fill-height>
-          <v-layout align-center justify-center>
-            <router-view></router-view>
-          </v-layout>
-        </v-container>
-      </v-content>
+      <!-- Provides the application the proper gutter -->
+      <v-container fluid>
+        <!-- If using vue-router -->
+        <router-view></router-view>
+      </v-container>
+      <v-footer app color="primary" bottom fixed padless width="100%">
+        v-footerv-footerv-footerv-footerv-footerv-footerv-footerv-footerv-footer
+      </v-footer>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import { mapState } from "vuex";
-
 export default {
   name: "App",
 
   components: {},
-  computed: {
-    ...mapState(["user"]),
-  },
 };
 </script>

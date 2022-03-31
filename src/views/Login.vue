@@ -1,7 +1,7 @@
 <template>
   <v-flex xs12 sm8 md4>
     <v-card class="elevation-12">
-      <v-toolbar dark color="primary">
+      <v-toolbar color="primary">
         <v-toolbar-title>Login form</v-toolbar-title>
       </v-toolbar>
       <v-card-text>
